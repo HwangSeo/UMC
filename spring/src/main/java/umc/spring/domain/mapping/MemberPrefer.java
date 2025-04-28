@@ -32,6 +32,6 @@ public class MemberPrefer extends BaseEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id")
-    private umc.spring.domain.foodCategory foodCategory;
+    private umc.spring.domain.FoodCategory foodCategory;
 
 }

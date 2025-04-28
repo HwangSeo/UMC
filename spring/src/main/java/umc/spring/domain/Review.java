@@ -35,7 +35,7 @@ public class Review extends BaseEntity {
     private Float score;
 
     @OneToMany(mappedBy = "review", cascade = CascadeType.ALL)
-    private List<reviewImage> reviewImageList = new ArrayList<>();
+    private List<ReviewImage> reviewImageList = new ArrayList<>();
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "store_id")
