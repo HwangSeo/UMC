@@ -41,4 +41,15 @@ public class MemberMission extends BaseEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member")
     private Member member;
+
+    @Override
+    public String toString() {
+        return "MemberMission{" +
+                "id=" + id +
+                ", status='" + status + '\'' +
+                ", member=" + (member != null ? member.getName() : "null") +
+                ", mission=" + (mission != null ? mission.getMissionSpec() : "null") +
+                '}';
+    }
+
 }

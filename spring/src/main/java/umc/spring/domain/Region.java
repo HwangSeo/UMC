@@ -23,4 +23,13 @@ public class Region extends BaseEntity {
     private Long id;
 
     private String name;
+
+    @Override
+    public String toString() {
+        return "Region{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
+
 }
