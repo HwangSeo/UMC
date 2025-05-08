@@ -35,7 +35,7 @@ public class QMember extends EntityPathBase<Member> {
 
     public final DatePath<java.time.LocalDate> inactiveDate = createDate("inactiveDate", java.time.LocalDate.class);
 
-    public final ListPath<MemberAgree, NumberPath<MemberAgree>> memberAgreeList = this.<MemberAgree, NumberPath<MemberAgree>>createList("memberAgreeList", MemberAgree.class, NumberPath.class, PathInits.DIRECT2);
+    public final ListPath<umc.spring.domain.mapping.MemberAgree, umc.spring.domain.mapping.QMemberAgree> memberAgreeList = this.<umc.spring.domain.mapping.MemberAgree, umc.spring.domain.mapping.QMemberAgree>createList("memberAgreeList", umc.spring.domain.mapping.MemberAgree.class, umc.spring.domain.mapping.QMemberAgree.class, PathInits.DIRECT2);
 
     public final ListPath<umc.spring.domain.mapping.MemberMission, umc.spring.domain.mapping.QMemberMission> memberMissionList = this.<umc.spring.domain.mapping.MemberMission, umc.spring.domain.mapping.QMemberMission>createList("memberMissionList", umc.spring.domain.mapping.MemberMission.class, umc.spring.domain.mapping.QMemberMission.class, PathInits.DIRECT2);
 
