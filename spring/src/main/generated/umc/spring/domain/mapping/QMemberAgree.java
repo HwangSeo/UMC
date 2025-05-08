@@ -31,7 +31,7 @@ public class QMemberAgree extends EntityPathBase<MemberAgree> {
 
     public final umc.spring.domain.QMember member;
 
-    public final NumberPath<Terms> terms = createNumber("terms", Terms.class);
+    public final umc.spring.domain.QTerms terms;
 
     //inherited
     public final DateTimePath<java.time.LocalDateTime> updatedAt = _super.updatedAt;
@@ -55,6 +55,7 @@ public class QMemberAgree extends EntityPathBase<MemberAgree> {
     public QMemberAgree(Class<? extends MemberAgree> type, PathMetadata metadata, PathInits inits) {
         super(type, metadata, inits);
         this.member = inits.isInitialized("member") ? new umc.spring.domain.QMember(forProperty("member")) : null;
+        this.terms = inits.isInitialized("terms") ? new umc.spring.domain.QTerms(forProperty("terms")) : null;
     }
 
 }
