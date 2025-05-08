@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3368f26c-15c4-4576-b399-0c76644bea26" name="Changes" comment="main 병합 BaseEntity랑 enum 디렉토리가 누락된 상태" />
+    <list default="true" id="3368f26c-15c4-4576-b399-0c76644bea26" name="Changes" comment="main 병합 BaseEntity랑 enum 디렉토리가 누락된 상태">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -222,7 +226,7 @@
       <workItem from="1746698443972" duration="478000" />
       <workItem from="1746698974218" duration="1207000" />
       <workItem from="1746700216543" duration="97000" />
-      <workItem from="1746700323722" duration="1914000" />
+      <workItem from="1746700323722" duration="2337000" />
     </task>
     <task id="LOCAL-00001" summary="JPA 활용 실습 커밋">
       <option name="closed" value="true" />
