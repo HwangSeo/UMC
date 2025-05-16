@@ -50,9 +50,9 @@ public class Review extends BaseEntity {
         return "Review{" +
                 "id=" + id +
                 ", score=" + score +
-                ", body='" + title + '\'' +
-                ", store=" + (store != null ? store.getName() : "null") +
-                ", member=" + (member != null ? member.getName() : "null") +
+                ", title='" + title + '\'' +
+                ", storeId=" + (store != null ? store.getId() : "null") +
+                ", memberId=" + (member != null ? member.getId() : "null") +
                 '}';
     }
 
