@@ -4,13 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3368f26c-15c4-4576-b399-0c76644bea26" name="Changes" comment="main 병합 BaseEntity랑 enum 디렉토리가 누락된 상태">
-      <change afterPath="$PROJECT_DIR$/src/main/java/umc/spring/converter/MemberConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/umc/spring/service/MemberService/MemberCommandService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/umc/spring/service/MemberService/MemberCommandServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/umc/spring/web/controller/MemberRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/umc/spring/web/dto/MemberRequestDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/umc/spring/web/dto/MemberResponseDTO.java" afterDir="false" />
+    <list default="true" id="3368f26c-15c4-4576-b399-0c76644bea26" name="Changes" comment="swagger세팅 및 회원가입 API 구현">
+      <change afterPath="$PROJECT_DIR$/src/main/java/umc/spring/apiPayload/exception/handler/MemberHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/umc/spring/apiPayload/exception/handler/MissionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/umc/spring/apiPayload/exception/handler/RegionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/umc/spring/apiPayload/exception/handler/StoreHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/umc/spring/converter/ReviewConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/umc/spring/converter/StoreConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/umc/spring/repository/MissionRepository/MemberMissionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/umc/spring/repository/RegionRepository/RegionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/umc/spring/service/MissionService/MissionCommandService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/umc/spring/service/MissionService/MissionCommandServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/umc/spring/service/ReviewService/ReviewCommandService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/umc/spring/service/ReviewService/ReviewCommandServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/umc/spring/service/StoreService/StoreCommandService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/umc/spring/service/StoreService/StoreCommandServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/umc/spring/validation/annotation/ExistStore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/umc/spring/validation/annotation/NotAlreadyChallenging.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/umc/spring/validation/validator/NotAlreadyChallengingValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/umc/spring/validation/validator/StoreExistValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/umc/spring/web/controller/MissionRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/umc/spring/web/controller/ReviewRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/umc/spring/web/controller/StoreRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/umc/spring/web/dto/MissionRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/umc/spring/web/dto/ReviewRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/umc/spring/web/dto/StoreRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.bin" afterDir="false" />
@@ -19,13 +40,16 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/umc/spring/domain/enums/Gender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/umc/spring/domain/enums/Gender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/umc/spring/apiPayload/code/status/ErrorStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/umc/spring/apiPayload/code/status/ErrorStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/umc/spring/web/dto/MemberRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/umc/spring/web/dto/MemberRequestDTO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -59,6 +83,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="AnnotationType" />
+        <option value="Exception" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -115,7 +141,7 @@
     &quot;project.structure.last.edited&quot;: &quot;모듈&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.import&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -242,6 +268,8 @@
       <workItem from="1746700323722" duration="3773000" />
       <workItem from="1746704198113" duration="2873000" />
       <workItem from="1747124878777" duration="10000" />
+      <workItem from="1747373943322" duration="11137000" />
+      <workItem from="1747392926322" duration="9672000" />
     </task>
     <task id="LOCAL-00001" summary="JPA 활용 실습 커밋">
       <option name="closed" value="true" />
@@ -283,7 +311,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746702277281</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="swagger세팅 및 회원가입 API 구현">
+      <option name="closed" value="true" />
+      <created>1747382119902</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1747382119902</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,7 +330,8 @@
     <MESSAGE value="QueryDSL 사용하여 DB 조회 쿼리 작성" />
     <MESSAGE value="API 작성" />
     <MESSAGE value="main 병합 BaseEntity랑 enum 디렉토리가 누락된 상태" />
-    <option name="LAST_COMMIT_MESSAGE" value="main 병합 BaseEntity랑 enum 디렉토리가 누락된 상태" />
+    <MESSAGE value="swagger세팅 및 회원가입 API 구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="swagger세팅 및 회원가입 API 구현" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
