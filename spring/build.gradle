@@ -55,6 +55,12 @@ dependencies {
 
 	//에러 핸들링
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+	//swagger 세팅
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.3.0'
+
+	//데이터베이스 검증
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
 }
 
 sourceSets {
