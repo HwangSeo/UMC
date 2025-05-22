@@ -6,14 +6,13 @@ import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
-import umc.spring.validation.validator.StoreExistValidator;
+import umc.spring.validation.validator.PageValidator;
 
-// ExistStore.java
-@Target({ ElementType.FIELD, ElementType.PARAMETER })
+@Target({ElementType.PARAMETER})
 @Retention(RetentionPolicy.RUNTIME)
-@Constraint(validatedBy = StoreExistValidator.class)
-public @interface ExistStore {
-    String message() default "존재하지 않는 가게입니다.";
+@Constraint(validatedBy = PageValidator.class)
+public @interface ValidPage {
+    String message() default "페이지는 1 이상의 정수여야 합니다.";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
 }
