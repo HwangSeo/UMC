@@ -40,7 +40,7 @@ public class MemberRestController {
         return ApiResponse.onSuccess(MemberConverter.toJoinResultDTO(member));
     }
 
-    @GetMapping("/members/{memberId}/reviews")
+    @GetMapping("/{memberId}/reviews")
     @Operation(summary = "내가 작성한 리뷰 목록 조회 API")
     @ApiResponses({
             @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "COMMON200",description = "OK, 성공")
