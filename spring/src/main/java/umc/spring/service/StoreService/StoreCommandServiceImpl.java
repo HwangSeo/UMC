@@ -21,11 +21,12 @@ public class StoreCommandServiceImpl implements StoreCommandService {
 
     @Override
     @Transactional
-    public void createStore(Long regionId, CreateStore dto) {
+    public Store createStore(Long regionId, CreateStore dto) {
         Region region = regionRepository.findById(regionId)
                 .orElseThrow(() -> new RegionHandler(ErrorStatus.REGION_NOT_FOUND));
 
         Store store = StoreConverter.toStore(dto, region);
         storeRepository.save(store);
+        return store;
     }
 }

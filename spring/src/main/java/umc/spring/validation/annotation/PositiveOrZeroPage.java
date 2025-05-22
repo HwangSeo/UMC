@@ -2,19 +2,19 @@ package umc.spring.validation.annotation;
 
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
+import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
-import umc.spring.validation.validator.StoreExistValidator;
+import umc.spring.validation.validator.PageValidator;
 
-// ExistStore.java
-@Target({ ElementType.FIELD, ElementType.PARAMETER })
+@Documented
+@Constraint(validatedBy = PageValidator.class)
+@Target({ElementType.PARAMETER, ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
-@Constraint(validatedBy = StoreExistValidator.class)
-public @interface ExistStore {
-    String message() default "존재하지 않는 가게입니다.";
+public @interface PositiveOrZeroPage {
+    String message() default "페이지 번호는 0 이상의 정수여야 합니다.";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
 }
-
