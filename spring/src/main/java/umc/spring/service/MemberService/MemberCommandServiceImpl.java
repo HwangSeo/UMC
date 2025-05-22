@@ -7,13 +7,17 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import umc.spring.apiPayload.code.status.ErrorStatus;
 import umc.spring.apiPayload.exception.handler.FoodCategoryHandler;
+import umc.spring.apiPayload.exception.handler.MemberHandler;
 import umc.spring.converter.MemberConverter;
 import umc.spring.converter.MemberPreferConverter;
 import umc.spring.domain.FoodCategory;
 import umc.spring.domain.Member;
+import umc.spring.domain.enums.MissionStatus;
+import umc.spring.domain.mapping.MemberMission;
 import umc.spring.domain.mapping.MemberPrefer;
 import umc.spring.repository.FoodCategoryRepository.FoodCategoryRepository;
 import umc.spring.repository.MemberRepository.MemberRepository;
+import umc.spring.repository.MissionRepository.MemberMissionRepository;
 import umc.spring.web.dto.MemberRequestDTO;
 
 @Service
@@ -23,6 +27,7 @@ public class MemberCommandServiceImpl implements MemberCommandService{
     private final MemberRepository memberRepository;
 
     private final FoodCategoryRepository foodCategoryRepository;
+    private final MemberMissionRepository memberMissionRepository;
 
     @Transactional
     @Override
@@ -43,4 +48,17 @@ public class MemberCommandServiceImpl implements MemberCommandService{
 
         return memberRepository.save(newMember);
     }
+    @Override
+    @Transactional
+    public void completeMission(Long memberId, Long memberMissionId) {
+        MemberMission memberMission = memberMissionRepository.findByIdAndMemberId(memberMissionId, memberId)
+                .orElseThrow(() -> new MemberHandler(ErrorStatus.MISSION_NOT_FOUND));
+
+        if (memberMission.getStatus() == MissionStatus.COMPLETE) {
+            throw new MemberHandler(ErrorStatus.ALREADY_CHALLENGING); // 에러 메시지를 바꿔도 좋습니다
+        }
+
+        memberMission.changeStatus(MissionStatus.COMPLETE);
+    }
+
 }

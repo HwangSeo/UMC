@@ -16,7 +16,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import umc.spring.domain.Member;
 import umc.spring.domain.Mission;
-import umc.spring.domain.Store;
 import umc.spring.domain.common.BaseEntity;
 import umc.spring.domain.enums.MissionStatus;
 
@@ -51,5 +50,9 @@ public class MemberMission extends BaseEntity {
                 ", mission=" + (mission != null ? mission.getMissionSpec() : "null") +
                 '}';
     }
+    public void changeStatus(MissionStatus newStatus) {
+        this.status = newStatus;
+    }
+
 
 }

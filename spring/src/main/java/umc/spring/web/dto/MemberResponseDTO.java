@@ -41,5 +41,29 @@ public class MemberResponseDTO {
         private Boolean isFirst;
         private Boolean isLast;
     }
+    @Getter
+    @Builder
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class ChallengingMissionDTO {
+        private String missionSpec;
+        private Integer reward;
+        private LocalDate deadline;
+        private String storeName;
+    }
+
+    @Getter
+    @Builder
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class ChallengingMissionListDTO {
+        private List<ChallengingMissionDTO> missionList;
+        private Integer listSize;
+        private Integer totalPage;
+        private Long totalElements;
+        private Boolean isFirst;
+        private Boolean isLast;
+    }
+
 
 }

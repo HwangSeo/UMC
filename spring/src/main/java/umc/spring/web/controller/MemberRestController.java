@@ -17,6 +17,7 @@ import umc.spring.apiPayload.ApiResponse;
 import umc.spring.converter.MemberConverter;
 import umc.spring.domain.Member;
 import umc.spring.domain.Review;
+import umc.spring.domain.mapping.MemberMission;
 import umc.spring.service.MemberService.MemberCommandService;
 import umc.spring.service.MemberService.MemberQueryService;
 import umc.spring.validation.annotation.ValidPage;
@@ -51,5 +52,18 @@ public class MemberRestController {
         Page<Review> reviews = memberQueryService.getMyReviews(memberId, page - 1);
         return ApiResponse.onSuccess(MemberConverter.toReviewPreviewListDTO(reviews));
     }
+    @GetMapping("/{memberId}/missions")
+    @Operation(summary = "내가 진행 중인 미션 목록 조회 API")
+    @ApiResponses({
+            @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "COMMON200",description = "OK, 성공")
+    })
+    public ApiResponse<MemberResponseDTO.ChallengingMissionListDTO> getMyChallengingMissions(
+            @PathVariable Long memberId,
+            @ValidPage @RequestParam("page") Integer page) {
+
+        Page<MemberMission> missions = memberQueryService.getChallengingMissions(memberId, page - 1);
+        return ApiResponse.onSuccess(MemberConverter.toChallengingMissionListDTO(missions));
+    }
+
 
 }
