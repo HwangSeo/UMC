@@ -3,11 +3,14 @@ package umc.spring.converter;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.springframework.data.domain.Page;
+import umc.spring.domain.Mission;
 import umc.spring.domain.Region;
 import umc.spring.domain.Review;
 import umc.spring.domain.Store;
 import umc.spring.web.dto.StoreRequestDTO.CreateStore;
 import umc.spring.web.dto.StoreResponseDTO;
+import umc.spring.web.dto.StoreResponseDTO.MissionPreviewDTO;
+import umc.spring.web.dto.StoreResponseDTO.MissionPreviewListDTO;
 
 public class StoreConverter {
     public static Store toStore(CreateStore request, Region region) {
@@ -36,6 +39,7 @@ public class StoreConverter {
                 .body(review.getTitle())
                 .build();
     }
+
     public static StoreResponseDTO.ReviewPreViewListDTO reviewPreViewListDTO(Page<Review> reviewList){
 
         List<StoreResponseDTO.ReviewPreViewDTO> reviewPreViewDTOList = reviewList.stream()
@@ -50,4 +54,28 @@ public class StoreConverter {
                 .reviewList(reviewPreViewDTOList)
                 .build();
     }
+    public static MissionPreviewDTO toMissionPreviewDTO(Mission mission) {
+        return StoreResponseDTO.MissionPreviewDTO.builder()
+                .missionSpec(mission.getMissionSpec())
+                .reward(mission.getReward())
+                .deadline(mission.getDeadline())
+                .build();
+    }
+
+    public static MissionPreviewListDTO toMissionPreviewListDTO(Page<Mission> missionPage) {
+        List<StoreResponseDTO.MissionPreviewDTO> missionList = missionPage.stream()
+                .map(StoreConverter::toMissionPreviewDTO)
+                .collect(Collectors.toList());
+
+        return StoreResponseDTO.MissionPreviewListDTO.builder()
+                .missionList(missionList)
+                .listSize(missionList.size())
+                .totalPage(missionPage.getTotalPages())
+                .totalElements(missionPage.getTotalElements())
+                .isFirst(missionPage.isFirst())
+                .isLast(missionPage.isLast())
+                .build();
+    }
+
+
 }

@@ -3,7 +3,11 @@ package umc.spring.web.dto;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import java.time.LocalDate;
+import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 public class MissionRequestDTO {
@@ -21,4 +25,5 @@ public class MissionRequestDTO {
         @NotNull(message = "보상은 필수입니다.")
         private Integer reward;
     }
+
 }

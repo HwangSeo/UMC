@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import umc.spring.apiPayload.ApiResponse;
 import umc.spring.converter.StoreConverter;
+import umc.spring.domain.Mission;
 import umc.spring.domain.Review;
 import umc.spring.domain.Store;
 import umc.spring.service.StoreService.StoreCommandService;
@@ -61,5 +62,18 @@ public class StoreRestController {
         return ApiResponse.onSuccess(StoreConverter.reviewPreViewListDTO(reviewPage));
 
     }
+    @GetMapping("/{storeId}/missions")
+    @Operation(summary = "특정 가게의 미션 목록 조회 API")
+    @ApiResponses({
+            @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "COMMON200",description = "OK, 성공")
+    })
+    public ApiResponse<StoreResponseDTO.MissionPreviewListDTO> getMissionList(
+            @ExistStore @PathVariable Long storeId,
+            @ValidPage @RequestParam(name = "page") Integer page) {
+
+        Page<Mission> missionPage = storeQueryService.getMissionList(storeId, page - 1);
+        return ApiResponse.onSuccess(StoreConverter.toMissionPreviewListDTO(missionPage));
+    }
+
 }
 
