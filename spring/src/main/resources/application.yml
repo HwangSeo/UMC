@@ -23,7 +23,13 @@ spring:
         default_batch_fetch_size: 1000
 
 
-  logging:
+logging:
     level:
       org.springframework.web: DEBUG
+
+jwt:
+    token:
+      secretKey: umceightfightingjwttokenauthentication
+      expiration:
+        access: 14400000
 

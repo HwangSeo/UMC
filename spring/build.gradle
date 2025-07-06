@@ -36,6 +36,7 @@ dependencies {
 	// Spring Boot 기본 의존성
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
 
 	// MySQL 드라이버
 	runtimeOnly 'mysql:mysql-connector-java:8.0.33'
@@ -52,7 +53,7 @@ dependencies {
 	// 테스트 의존성
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-
+	testImplementation 'org.springframework.security:spring-security-test'
 	//에러 핸들링
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 
@@ -61,6 +62,11 @@ dependencies {
 
 	//데이터베이스 검증
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+	// jwt
+	implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
+	runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.5'
+	runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.5'
 }
 
 sourceSets {

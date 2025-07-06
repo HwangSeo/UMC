@@ -1,13 +1,27 @@
 package umc.spring.web.dto;
 
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import java.util.List;
 import lombok.Getter;
+import lombok.Setter;
+import umc.spring.domain.enums.Role;
 import umc.spring.validation.annotation.ExistCategories;
 
 public class MemberRequestDTO {
+
+    @Getter
+    @Setter
+    public static class LoginRequestDTO{
+        @NotBlank(message = "이메일은 필수입니다.")
+        @Email(message = "올바른 이메일 형식이어야 합니다.")
+        private String email;
+
+        @NotBlank(message = "패스워드는 필수입니다.")
+        private String password;
+    }
 
     @Getter
     public static class JoinDto{
@@ -15,12 +29,8 @@ public class MemberRequestDTO {
         String name;
         @NotNull
         Integer gender;
-        @NotNull
-        Integer birthYear;
-        @NotNull
-        Integer birthMonth;
-        @NotNull
-        Integer birthDay;
+        @NotBlank
+        String password;
         @Size(min = 5, max = 12)
         String address;
         @Size(min = 5, max = 12)
@@ -29,5 +39,7 @@ public class MemberRequestDTO {
         List<Integer> preferCategory;
         @NotBlank
         String email;
+        @NotNull
+        Role role;
     }
 }
