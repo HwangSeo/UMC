@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3368f26c-15c4-4576-b399-0c76644bea26" name="Changes" comment="jwt 설정,로그인 로직 구현">
-      <change beforePath="$PROJECT_DIR$/src/main/java/umc/spring/web/dto/MemberResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/umc/spring/web/dto/MemberResponseDTO.java" afterDir="false" />
+    <list default="true" id="3368f26c-15c4-4576-b399-0c76644bea26" name="Changes" comment="내 정보 조회 로직 구현">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/generated/umc/spring/domain/QMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/generated/umc/spring/domain/QMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/umc/spring/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/umc/spring/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/umc/spring/converter/MemberConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/umc/spring/converter/MemberConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/umc/spring/web/dto/MemberRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/umc/spring/web/dto/MemberRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -245,7 +250,7 @@
       <workItem from="1751078823805" duration="652000" />
       <workItem from="1751266116714" duration="7000" />
       <workItem from="1751719749013" duration="862000" />
-      <workItem from="1751786006033" duration="3351000" />
+      <workItem from="1751786006033" duration="5964000" />
     </task>
     <task id="LOCAL-00001" summary="JPA 활용 실습 커밋">
       <option name="closed" value="true" />
@@ -351,7 +356,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751789321940</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="내 정보 조회 로직 구현">
+      <option name="closed" value="true" />
+      <created>1751789671782</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1751789671782</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,7 +384,8 @@
     <MESSAGE value="URL 수정" />
     <MESSAGE value="SecurityConfig 설정, 로그인 로직 구현" />
     <MESSAGE value="jwt 설정,로그인 로직 구현" />
-    <option name="LAST_COMMIT_MESSAGE" value="jwt 설정,로그인 로직 구현" />
+    <MESSAGE value="내 정보 조회 로직 구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="내 정보 조회 로직 구현" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -7,6 +7,7 @@ import jakarta.validation.constraints.Size;
 import java.util.List;
 import lombok.Getter;
 import lombok.Setter;
+import umc.spring.domain.enums.Role;
 import umc.spring.validation.annotation.ExistCategories;
 
 public class MemberRequestDTO {
@@ -28,6 +29,8 @@ public class MemberRequestDTO {
         String name;
         @NotNull
         Integer gender;
+        @NotBlank
+        String password;
         @NotNull
         Integer birthYear;
         @NotNull
@@ -42,5 +45,7 @@ public class MemberRequestDTO {
         List<Integer> preferCategory;
         @NotBlank
         String email;
+        @NotNull
+        Role role;
     }
 }
