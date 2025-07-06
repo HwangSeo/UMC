@@ -15,6 +15,15 @@ public class MemberResponseDTO {
     @Getter
     @NoArgsConstructor
     @AllArgsConstructor
+    public static class LoginResultDTO {
+        Long memberId;
+        String accessToken;
+    }
+
+    @Builder
+    @Getter
+    @NoArgsConstructor
+    @AllArgsConstructor
     public static class JoinResultDTO{
         Long memberId;
         LocalDateTime createdAt;
@@ -64,6 +73,5 @@ public class MemberResponseDTO {
         private Boolean isFirst;
         private Boolean isLast;
     }
-
 
 }
