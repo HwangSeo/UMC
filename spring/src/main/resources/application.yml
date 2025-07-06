@@ -19,15 +19,15 @@ spring:
         format_sql: true
         use_sql_comments: true
         hbm2ddl:
-          auto: create
+          auto: update
         default_batch_fetch_size: 1000
 
 
-  logging:
+logging:
     level:
       org.springframework.web: DEBUG
 
-  jwt:
+jwt:
     token:
       secretKey: umceightfightingjwttokenauthentication
       expiration:

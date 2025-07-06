@@ -44,6 +44,8 @@ public class MemberCommandServiceImpl implements MemberCommandService{
         System.out.println("📌 요청 받은 카테고리 ID들: " + request.getPreferCategory());
 
         Member newMember = MemberConverter.toMember(request);
+        newMember.encodePassword(passwordEncoder.encode(request.getPassword()));
+
         List<FoodCategory> foodCategoryList = request.getPreferCategory().stream()
                 .map(category -> {
                     return foodCategoryRepository.findById(category).orElseThrow(() -> new FoodCategoryHandler(

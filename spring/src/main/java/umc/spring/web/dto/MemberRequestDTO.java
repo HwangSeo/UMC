@@ -31,12 +31,6 @@ public class MemberRequestDTO {
         Integer gender;
         @NotBlank
         String password;
-        @NotNull
-        Integer birthYear;
-        @NotNull
-        Integer birthMonth;
-        @NotNull
-        Integer birthDay;
         @Size(min = 5, max = 12)
         String address;
         @Size(min = 5, max = 12)
