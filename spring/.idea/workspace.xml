@@ -4,25 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3368f26c-15c4-4576-b399-0c76644bea26" name="Changes" comment="URL 수정">
-      <change afterPath="$PROJECT_DIR$/src/main/java/umc/spring/config/properties/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/umc/spring/config/properties/JwtProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/umc/spring/config/security/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/umc/spring/config/security/jwt/JwtAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/umc/spring/config/security/jwt/JwtTokenProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/umc/spring/domain/enums/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/umc/spring/apiPayload/code/status/ErrorStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/umc/spring/apiPayload/code/status/ErrorStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/umc/spring/converter/MemberConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/umc/spring/converter/MemberConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/umc/spring/domain/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/umc/spring/domain/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/umc/spring/repository/MemberRepository/MemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/umc/spring/repository/MemberRepository/MemberRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/umc/spring/service/MemberService/MemberCommandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/umc/spring/service/MemberService/MemberCommandService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/umc/spring/service/MemberService/MemberCommandServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/umc/spring/service/MemberService/MemberCommandServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/umc/spring/web/controller/MemberRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/umc/spring/web/controller/MemberRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/umc/spring/web/dto/MemberRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/umc/spring/web/dto/MemberRequestDTO.java" afterDir="false" />
+    <list default="true" id="3368f26c-15c4-4576-b399-0c76644bea26" name="Changes" comment="jwt 설정,로그인 로직 구현">
       <change beforePath="$PROJECT_DIR$/src/main/java/umc/spring/web/dto/MemberResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/umc/spring/web/dto/MemberResponseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -262,7 +245,7 @@
       <workItem from="1751078823805" duration="652000" />
       <workItem from="1751266116714" duration="7000" />
       <workItem from="1751719749013" duration="862000" />
-      <workItem from="1751786006033" duration="2909000" />
+      <workItem from="1751786006033" duration="3351000" />
     </task>
     <task id="LOCAL-00001" summary="JPA 활용 실습 커밋">
       <option name="closed" value="true" />
@@ -360,7 +343,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747927554508</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="jwt 설정,로그인 로직 구현">
+      <option name="closed" value="true" />
+      <created>1751789321940</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1751789321940</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,7 +369,9 @@
     <MESSAGE value="특정 가게 미션 목록 API 구현, 페이징 적용" />
     <MESSAGE value="내가 진행중인 미션 목록(페이징 처리), 진행중인 미션 진행 완료로 바꾸기 구현 완료" />
     <MESSAGE value="URL 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="URL 수정" />
+    <MESSAGE value="SecurityConfig 설정, 로그인 로직 구현" />
+    <MESSAGE value="jwt 설정,로그인 로직 구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="jwt 설정,로그인 로직 구현" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

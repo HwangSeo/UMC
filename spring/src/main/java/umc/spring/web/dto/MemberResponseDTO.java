@@ -73,5 +73,13 @@ public class MemberResponseDTO {
         private Boolean isFirst;
         private Boolean isLast;
     }
-
+    @Builder
+    @Getter
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class MemberInfoDTO{
+        String name;
+        String email;
+        String gender;
+    }
 }
